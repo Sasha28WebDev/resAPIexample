@@ -49,11 +49,9 @@ class UserController {
                 return res.sendStatus(403)
             }
             const accessToken = jwt.sign({ username: user.username, role: user.role }, ACCESS_TOKEN_SECRET, { expiresIn: '15m' });
-            /* res.json({
+             res.json({
                 accessToken
-            })  */
-            req.token = accessToken
-            console.log(token)
+            }) 
             next()
         })
     }
