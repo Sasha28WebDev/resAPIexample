@@ -11,6 +11,9 @@
 
 ## Описание API
 
+login: Petr
+password : password123member
+
 Auth:
 
 - /auth/login (POST) - вход пользователя. После авторизации и аутентификации сервер отдает два токена - токен доступа(access) и токен на обновление(refresh) 
