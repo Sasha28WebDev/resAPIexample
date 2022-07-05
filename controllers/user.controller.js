@@ -18,9 +18,9 @@ class UserController {
         res.json(users)
     }
     async createUser(req, res, next) {
-        const { login, password } = req.body
+        const { username, password, role } = req.body
         try {
-            await User.create({ login, password })
+            await User.create({ username, password, role })
         } catch (err) {
             return next(err)
         }
